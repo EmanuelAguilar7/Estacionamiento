@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EstacionamientoNe
 {
@@ -23,6 +24,22 @@ namespace EstacionamientoNe
         public MainWindow()
         {
             InitializeComponent();
+            startclock();
+
+        }
+
+
+        private void startclock()
+        {
+            DispatcherTimer d = new DispatcherTimer();
+            d.Interval = TimeSpan.FromSeconds(1);
+            d.Tick += tickevent;
+            d.Start();
+        }
+
+        private void tickevent(object sender, EventArgs e)
+        {
+            date.Text = DateTime.Now.ToString();
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)

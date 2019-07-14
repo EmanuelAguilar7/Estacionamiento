@@ -9,19 +9,19 @@
         Title="MainWindow"  Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
     <Grid Background="LightGray" Margin="0,-12,0,12">
         <Grid x:Name="Contenedor" Margin="200,60,0,0">
-         
+
         </Grid>
 
-            <Grid  Height="60" Width="880" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF3A49DE">
-                <TextBlock Text="Estacionamiento" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button x:Name="BtnClose" Background="{x:Null}" Width="60" Height="30"  VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnClose_Click" >
-                        <materialDesign:PackIcon  Foreground="#FF0A1636" Kind="Close" Width="25" Height="25"/>
-                    </Button>
+        <Grid  Height="60" Width="880" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF3A49DE">
+            <TextBlock Text="Estacionamiento" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="BtnClose" Background="{x:Null}" Width="60" Height="30"  VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnClose_Click" >
+                    <materialDesign:PackIcon  Foreground="#FF0A1636" Kind="Close" Width="25" Height="25"/>
+                </Button>
 
-                </StackPanel>
-            </Grid>
-            <Grid x:Name="Opciones" Width="200" HorizontalAlignment="Left" Background="#FF0A1636">
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="Opciones" Width="200" HorizontalAlignment="Left" Background="#FF0A1636">
             <StackPanel>
                 <Grid Height="150" Background="white">
                     <Image  Source="parkeo-logo.png" Stretch="Fill"/>
@@ -54,8 +54,10 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="532,279,0,0" VerticalAlignment="Top" Width="100"/>
-
-
+        <Grid x:Name="ContenedorPrincipal" HorizontalAlignment="Left" Height="540" Margin="200,60,0,0" VerticalAlignment="Top" Width="880"/>
+        <TextBlock Name="date" FontSize="120" HorizontalAlignment="Left" Height="329" Margin="319,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="636"/>
     </Grid>
+
+
+
 </Window>

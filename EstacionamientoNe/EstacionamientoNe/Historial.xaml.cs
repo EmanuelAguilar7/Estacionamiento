@@ -11,6 +11,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LiveCharts;
+using LiveCharts.Wpf;
+using System.Net;
+using System.IO;
+using System.Windows.Threading;
+using LiveCharts.Defaults;
+using LiveCharts.Configurations;
+using System.Threading;
+using System.Timers;
+
 
 namespace EstacionamientoNe
 {
@@ -22,6 +32,9 @@ namespace EstacionamientoNe
         public Historial()
         {
             InitializeComponent();
+            
+            Consumo consumo = new Consumo();
+            DataContext = new ConsumoViewModel(consumo);
         }
 
         private void BtnRegresarMenu_Click(object sender, RoutedEventArgs e)
@@ -30,5 +43,43 @@ namespace EstacionamientoNe
             MainWindow menu = new MainWindow();
             menu.ShowDialog();
         }
+
+      
+        internal class ConsumoViewModel
+        {
+            public List<Consumo> Consumo { get; private set; }
+
+            public ConsumoViewModel(Consumo consumo)
+            {
+                Consumo = new List<Consumo>();
+                Consumo.Add(consumo);
+            }
+        }
+
+        internal class Consumo
+        {
+            public string Titulo { get; private set; }
+            public int Porcentagem { get; private set; }
+
+            public Consumo()
+            {
+                Titulo = "Consumo Atual";
+                Porcentagem = CalcularPorcentagem();
+            }
+
+            private int CalcularPorcentagem()
+            {
+                return 87; //Calculo da porcentagem de consumo
+            }
+        }
+
+
+
+
+
     }
+
+
+
+    
 }

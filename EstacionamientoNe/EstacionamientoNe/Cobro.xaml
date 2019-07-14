@@ -18,10 +18,11 @@
             </StackPanel>
         </Grid>
 
-        <Button FontSize="30" Content="Buscar" HorizontalAlignment="Left" Height="55" Margin="801,112,0,0" VerticalAlignment="Top" Width="141"/>
-        <TextBox FontSize="30" Background="#FFB2A9A9" HorizontalAlignment="Left" Height="55" Margin="185,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="466"/>
-        <DataGrid HorizontalAlignment="Left" Height="170" Margin="185,198,0,0" VerticalAlignment="Top" Width="757"/>
-        <Button FontSize="30" Content="Retirar" HorizontalAlignment="Left" Height="51" Margin="185,420,0,0" VerticalAlignment="Top" Width="136"/>
-        <TextBox FontSize="30" Background="#FFB2A9A9" HorizontalAlignment="Left" Height="51" Margin="784,420,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="158"/>
+        <Button FontSize="30" Content="Buscar" HorizontalAlignment="Left" Height="55" Margin="801,112,0,0" VerticalAlignment="Top" Width="141" Click="Button_Click"/>
+        <TextBox x:Name="txtbuscar" FontSize="30" Background="#FFB2A9A9" HorizontalAlignment="Left" Height="55" Margin="185,112,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="466"/>
+        <DataGrid x:Name="dgbuscar" HorizontalAlignment="Left" Height="170" Margin="185,198,0,0" VerticalAlignment="Top" Width="757" />
+        <Button x:Name="btnretirar" FontSize="30" Content="Retirar" HorizontalAlignment="Left" Height="51" Margin="111,420,0,0" VerticalAlignment="Top" Width="210" Click="Btnretirar_Click"/>
+        <TextBox x:Name="Total" FontSize="30" Text="   TOTAL:  0.0"  FontWeight="Black"  Background="#FFB2A9A9" HorizontalAlignment="Left" Height="53" Margin="764,420,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="241"/>
+        <Button FontSize="30" Content="Actualizar" HorizontalAlignment="Left" Height="55" Margin="476,418,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click_1"/>
     </Grid>
 </Window>

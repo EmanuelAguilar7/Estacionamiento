@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EstacionamientoNe"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:MetroChart="clr-namespace:MetroChart.WPF;assembly=MetroChart.WPF"
         mc:Ignorable="d"
         Title="Historial" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
-    <Grid Background="LightGray" Margin="0,-12,0,12">
+    <Grid Background="LightGray" Margin="0,-12,0,12" >
         <Grid Height="60" VerticalAlignment="Top" Background="#FF3A49DE">
             <TextBlock Text="Estacionamiento" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -16,10 +18,27 @@
                 </Button>
 
             </StackPanel>
+
         </Grid>
-        <Button FontSize="30" Content="Generar Reporte" HorizontalAlignment="Left" Height="51" Margin="725,499,0,0" VerticalAlignment="Top" Width="276"/>
+        <Button FontSize="30" Content="Generar Reporte" HorizontalAlignment="Left" Height="51" Margin="419,505,0,0" VerticalAlignment="Top" Width="276"/>
 
+        <Grid Margin="50 90 50 150" Width="600" >
+            <Grid.OpacityMask>
+                <VisualBrush Visual="{ Binding ElementName=BorderG2 }"/>
+            </Grid.OpacityMask>
+            <Border x:Name="BorderG2" CornerRadius="15" Background="#FF340051"/>
 
+            <MetroChart:RadialGaugeChart Background="{x:Null}" ChartTitle="Consumo" ChartSubTitle="" Foreground="LightGray" >
+                <MetroChart:RadialGaugeChart.Series>
+                    <MetroChart:ChartSeries
+                                        DisplayMember="Titulo"
+                                        ItemsSource="{Binding Path=Consumo}"
+                                        SeriesTitle="Consumo"
+                                        ValueMember="Porcentagem" HorizontalAlignment="Center"/>
+                </MetroChart:RadialGaugeChart.Series>
+            </MetroChart:RadialGaugeChart>
+            <Image Margin="334,89,10,68" Source="PARKING_CENTROS_COMERCIALES.jpg" Stretch="Fill"/>
+        </Grid>
 
     </Grid>
 </Window>

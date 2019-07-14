@@ -27,3 +27,10 @@ C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\obj\Debug\E
 C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\obj\Debug\EstacionamientoNe.pdb
 C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\obj\Debug\Historial.g.cs
 C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\obj\Debug\Historial.baml
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\LiveCharts.dll
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\LiveCharts.pdb
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\LiveCharts.xml
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Emanuel Aguilar\Desktop\EstacionamientoNe\EstacionamientoNe\bin\Debug\MetroChart.WPF.dll
