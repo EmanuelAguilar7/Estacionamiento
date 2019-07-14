@@ -1,0 +1,26 @@
+﻿<Window x:Class="EstacionamientoNe.Historial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EstacionamientoNe"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Historial" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
+    <Grid Background="LightGray" Margin="0,-12,0,12">
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF3A49DE">
+            <TextBlock Text="Estacionamiento" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="BtnRegresarMenu" Background="{x:Null}" Width="60" Height="30"  VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnRegresarMenu_Click"  >
+                    <materialDesign:PackIcon  Foreground="#FF0A1636" Kind="Close" Width="25" Height="25"/>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+        <Button FontSize="30" Content="Generar Reporte" HorizontalAlignment="Left" Height="51" Margin="725,499,0,0" VerticalAlignment="Top" Width="276"/>
+
+
+
+    </Grid>
+</Window>
+
