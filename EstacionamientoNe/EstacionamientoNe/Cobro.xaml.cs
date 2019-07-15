@@ -156,7 +156,12 @@ namespace EstacionamientoNe
                     sqlCommand.Parameters.AddWithValue("@placa", txtbuscar.Text);
                     sqlCommand.ExecuteNonQuery();
 
+                    
                     txtbuscar.Text = String.Empty;
+                    string a;
+                    a = dgbuscar.SelectedValue.ToString();
+                    MessageBox.Show("El vehiculo con numero de placa: "+ a +"\nSe ah retirado exitosamente\nTotal a pagar: L.10.00\n");
+
                 }
                 catch (Exception ex)
                 {

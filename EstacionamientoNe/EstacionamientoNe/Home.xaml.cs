@@ -79,11 +79,10 @@ namespace EstacionamientoNe
                 sqlCommand.Parameters.AddWithValue("@placa", placanum.Text);
                 sqlCommand.Parameters.AddWithValue("@vehiculo", txtvehi.SelectedValue);
                 sqlCommand.ExecuteNonQuery();
-
+        
+                MessageBox.Show("El Parking\nTicket de Ingreso\nEstacionamiento\n" + placanum.Text + "\n\nNo Pierda Este Ticket\n");
 
                 placanum.Text = String.Empty;
-
-                MessageBox.Show("Guardado Exitosamente");
             }
             catch (Exception ex)
             {

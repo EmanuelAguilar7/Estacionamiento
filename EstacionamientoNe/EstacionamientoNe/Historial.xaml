@@ -22,13 +22,13 @@
         </Grid>
         <Button FontSize="30" Content="Generar Reporte" HorizontalAlignment="Left" Height="51" Margin="419,505,0,0" VerticalAlignment="Top" Width="276"/>
 
-        <Grid Margin="50 90 50 150" Width="600" >
+        <Grid Margin="240,90,240,150" Width="600" >
             <Grid.OpacityMask>
                 <VisualBrush Visual="{ Binding ElementName=BorderG2 }"/>
             </Grid.OpacityMask>
-            <Border x:Name="BorderG2" CornerRadius="15" Background="#FF340051"/>
+            <Border x:Name="BorderG2" CornerRadius="15" Background="#FF340051" Margin="-194,0,194,0"/>
 
-            <MetroChart:RadialGaugeChart Background="{x:Null}" ChartTitle="Consumo" ChartSubTitle="" Foreground="LightGray" >
+            <MetroChart:RadialGaugeChart Background="{x:Null}" ChartTitle="Disponibilidad" ChartSubTitle="" Foreground="LightGray" Margin="-80,0,80,0" >
                 <MetroChart:RadialGaugeChart.Series>
                     <MetroChart:ChartSeries
                                         DisplayMember="Titulo"
@@ -37,8 +37,9 @@
                                         ValueMember="Porcentagem" HorizontalAlignment="Center"/>
                 </MetroChart:RadialGaugeChart.Series>
             </MetroChart:RadialGaugeChart>
-            <Image Margin="334,89,10,68" Source="PARKING_CENTROS_COMERCIALES.jpg" Stretch="Fill"/>
+            <Image Margin="132,89,212,68" Source="PARKING_CENTROS_COMERCIALES.jpg" Stretch="Fill"/>
         </Grid>
+        <DataGrid x:Name="llenar" HorizontalAlignment="Left" Height="360" Margin="664,90,0,0" VerticalAlignment="Top" Width="406" />
 
     </Grid>
 </Window>

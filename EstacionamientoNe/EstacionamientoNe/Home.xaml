@@ -21,7 +21,7 @@
         <TextBlock FontSize="30" HorizontalAlignment="Left" Height="57" Margin="71,151,0,0" TextWrapping="Wrap" Text="Numero de Placa" VerticalAlignment="Top" Width="264" IsHitTestVisible="False" Foreground="#FF0C0101"/>
         <TextBlock FontSize="30" HorizontalAlignment="Left" Height="57" Margin="71,328,0,0" TextWrapping="Wrap" Text="Tipo De Vehiculo" VerticalAlignment="Top" Width="264" IsHitTestVisible="False" Foreground="#FF0C0101"/>
         <ListBox x:Name="txtvehi" FontSize="30" HorizontalAlignment="Left" Height="165" Margin="71,385,0,0" VerticalAlignment="Top" Width="464" Background="#FFB2A9A9"/>
-        <TextBox x:Name="placanum" FontSize="30"  Background="#FFB2A9A9" HorizontalAlignment="Left" Height="42" Margin="71,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="464" MaxLength="7" />
+        <TextBox x:Name="placanum" FontSize="30"  Background="#FFB2A9A9" HorizontalAlignment="Left" Height="64" Margin="71,208,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="464" MaxLength="7" />
         <Button FontSize="30" Content="Generar Ticket" HorizontalAlignment="Left" Height="51" Margin="754,499,0,0" VerticalAlignment="Top" Width="247" Click="Button_Click"/>
 
         

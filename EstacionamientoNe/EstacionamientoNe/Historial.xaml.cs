@@ -20,7 +20,8 @@ using LiveCharts.Defaults;
 using LiveCharts.Configurations;
 using System.Threading;
 using System.Timers;
-
+using System.Data.SqlClient;
+using System.Data;
 
 namespace EstacionamientoNe
 {
@@ -29,12 +30,18 @@ namespace EstacionamientoNe
     /// </summary>
     public partial class Historial : Window
     {
+        SqlConnection sqlconnection;
         public Historial()
         {
             InitializeComponent();
-            
+            string connectionString = @"server=DESKTOP-M6GR8FE\SQLEXPRESS02;Initial Catalog=Estacionamiento;Integrated Security=True";
+            sqlconnection = new SqlConnection(connectionString);
+
             Consumo consumo = new Consumo();
             DataContext = new ConsumoViewModel(consumo);
+
+            Mostrar();
+            
         }
 
         private void BtnRegresarMenu_Click(object sender, RoutedEventArgs e)
@@ -63,19 +70,43 @@ namespace EstacionamientoNe
 
             public Consumo()
             {
-                Titulo = "Consumo Atual";
+                Titulo = "Disponibilidad Actual";
                 Porcentagem = CalcularPorcentagem();
             }
 
             private int CalcularPorcentagem()
             {
-                return 87; //Calculo da porcentagem de consumo
+                
+                return 87; 
             }
         }
+        
+        private void Mostrar()
+        {
+            try
+            {
+                string query = "SELECT * FROM Vehiculo";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlconnection);
 
+                using (sqlDataAdapter)
+                {
+                    DataTable tablaVehi = new DataTable();
+                    sqlDataAdapter.Fill(tablaVehi);
 
+                    llenar.DisplayMemberPath = "Num_Placa";
+                    llenar.DisplayMemberPath = "Hora_Ingreso";
+                    llenar.DisplayMemberPath = "Tipo_Vehiculo";
+                    llenar.SelectedValuePath = "Num_Placa";
+                    llenar.ItemsSource = tablaVehi.DefaultView;
+                }
 
-
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
     }
 
